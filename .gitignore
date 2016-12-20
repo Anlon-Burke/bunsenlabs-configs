@@ -1,0 +1,31 @@
+*
+
+!.gitignore
+!README.md
+!bunsenlabs-setup-notes.txt
+
+## configs
+!.config/
+.config/*
+
+# conky
+!.config/conky/
+.config/conky/*
+!.config/conky/nonphatic.conkyrc
+!.config/conky/images/
+.config/conky/images/*
+!.config/conky/images/weather/
+!.config/conky/images/weather/*
+!.config/conky/images/weather-icons/
+!.config/conky/images/weather-icons/*
+
+# openbox
+!.config/openbox/
+!.config/openbox/*
+
+# tint2
+!.config/tint2/
+!.config/tint2/*
+
+## vim
+!.vimrc
