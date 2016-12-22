@@ -122,13 +122,14 @@ launcher_icon_size = 0
 launcher_tooltip = 1
 # Specify icon theme names with launcher_icon_theme.
 # if you have an XSETTINGS manager running (like xfsettingsd), tint2 will follow your current theme.
-launcher_icon_theme = mono-dark-flattr-icons
+launcher_icon_theme = Paper
 
 # Each launcher_item_app must be a full path to a .desktop file
 # this will have to be made:
+launcher_item_app = /usr/share/applications/exit.desktop
 launcher_item_app = /usr/share/applications/bl-www-browser.desktop
 launcher_item_app = /usr/share/applications/bl-file-manager.desktop
-launcher_item_app = /usr/share/applications/bl-text-editor.desktop
+#launcher_item_app = /usr/share/applications/bl-text-editor.desktop
 launcher_item_app = /usr/share/applications/bl-terminal-emulator.desktop
 
 # System Tray
