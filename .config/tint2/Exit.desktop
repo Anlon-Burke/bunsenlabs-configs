@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Exit
+Comment=Invoke bl-exit
+GenericName=Exit
+Exec=bl-exit
+Icon=system-shutdown
+Terminal=false
+Categories=Utility;
