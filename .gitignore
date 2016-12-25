@@ -28,6 +28,10 @@
 !.config/i3
 !.config/i3/*
 
+# i3status
+!.config/i3status
+!.config/i3status/*
+
 # tint2
 !.config/tint2/
 !.config/tint2/*
