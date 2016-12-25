@@ -12,6 +12,7 @@ minimum_size 268 1220
 maximum_width 268
 alignment top_right
 own_window yes
+own_window_class Conky
 own_window_type desktop
 own_window_transparent yes
 own_window_argb_visual yes

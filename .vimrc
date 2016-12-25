@@ -6,6 +6,8 @@ set expandtab           " tabs = spaces
 set number              " line numbers
 set showcmd             " show last command on bottom
 set wildmenu            " visual autocomplete for command
-set showmatch           " highlight matching braces
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+set autoindent          " autoindentation 
+"set cindent             " C-style indentation
+set shiftwidth=4        " autoindentation as 4 spaces
