@@ -5,7 +5,7 @@
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
-    <focusNew>yes</focusNew>
+    <focusNew>no</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
     <followMouse>no</followMouse>
@@ -424,9 +424,19 @@
         <command>pavucontrol</command>
       </action>
     </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer set -D pulse Master 5%- unmute</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>amixer set -D pulse Master toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer set -D pulse Master 5%+ unmute</command>
       </action>
     </keybind>
     <keybind key="W-x">
