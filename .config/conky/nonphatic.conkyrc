@@ -86,11 +86,11 @@ ${hr 2}
 \
 
 #${voffset -5}
-${goto 40}${cpugraph 20,190 FFFFFF FFFFFF -l}
+${goto 40}${cpugraph 40,190 FFFFFF FFFFFF -l}
 ${goto 40}${color5}CPU:${goto 115}${freq_g} GHz${alignr 39}${cpu}%
-${goto 40}${memgraph 20,190 FFFFFF FFFFFF -l}
+${goto 40}${memgraph 40,190 FFFFFF FFFFFF -l}
 ${goto 40}${color5}Mem/Swap:${goto 115}${mem} | ${swap}${alignr 39}${memperc}%
-${goto 40}${diskiograph 20,190 FFFFFF FFFFFF -l}
+${goto 40}${diskiograph 40,190 FFFFFF FFFFFF -l}
 ${goto 40}${color5}Root/User:${goto 115}${fs_used /} | ${execi 3600 du -sh /home/jonathan/ | awk '{print $1}'}${alignr 39}${diskio}
 
 ${hr 2}
@@ -98,13 +98,13 @@ ${hr 2}
 # Network
 \
 ${if_existing /proc/net/route wlan0}
-	${goto 40}${upspeedgraph wlan0 20,80 FFFFFF FFFFFF}${goto 150}${downspeedgraph wlan0 20,80 FFFFFF FFFFFF}
+	${goto 40}${upspeedgraph wlan0 40,80 FFFFFF FFFFFF}${goto 150}${downspeedgraph wlan0 40,80 FFFFFF FFFFFF}
 	${goto 40}${color5}Up: ${color2}${upspeed wlan0}${color5}${goto 150}Down: ${color2}${downspeed wlan0}
 	${goto 40}${color5}Sent: ${color2}${totalup wlan0}${color5}${goto 150}Received: ${color2}${totaldown wlan0}
 ${else}${goto 40}${voffset 20}${color5}No network connection.\
 ${endif}\
 #${if_existing /proc/net/route eth0}
-	#${goto 40}${upspeedgraph eth0 26,80 FFFFFF FFFFFF}${goto 150}${downspeedgraph eth0 26,80 FFFFFF FFFFFF}
+	#${goto 40}${upspeedgraph eth0 40,80 FFFFFF FFFFFF}${goto 150}${downspeedgraph eth0 40,80 FFFFFF FFFFFF}
 	#${goto 40}${color5}Up: ${color2}${upspeed eth0}${color5}${goto 150}Down: ${color2}${downspeed eth0}
 	#${goto 40}${color5}Sent: ${color2}${totalup eth0}${color5}${goto 150}Received: ${color2}${totaldown eth0}
 #${endif}
@@ -115,12 +115,16 @@ ${hr 2}
 \
 
 ${goto 40}${color5}Uptime:${alignr 40}${uptime}
+
 ${goto 40}${color5}UTC:${alignr 40}${utime %H:%M:%S}
-${if_match ${battery_percent BAT1} != 100}\
-	${goto 40}${color5}Battery:${alignr 39}${battery_time BAT1} left\
+
+${if_match ${battery_percent BAT0} != 100}\
+	${goto 40}${color5}Battery:${alignr 39}${battery_time BAT0} left\
 ${else}${goto 40}${color5}Battery:${alignr 39}Fully charged\
 ${endif}
-${goto 40}${color5}Volume: ${alignr 39}${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6}
+
+${goto 40}${color5}Volume: ${alignr 39}${exec amixer -c 1 get Master | grep Mono: | cut -d " " -f6}
+
 ${alignc}${pre_exec lsb_release -i | cut -f 2| tr "[:upper:]" "[:lower:]"} \
 ${pre_exec lsb_release -r | cut -f 2| tr "[:upper:]" "[:lower:]"} \
 (${pre_exec lsb_release -c | cut -f 2| tr "[:upper:]" "[:lower:]"})
