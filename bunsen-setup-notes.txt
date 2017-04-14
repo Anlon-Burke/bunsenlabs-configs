@@ -1,0 +1,23 @@
+TINT2
+* launcher icons cannot be SVG; replace the following with PNGs:
+    - accessories-text-editor
+    - applications-internet
+    - system-file-manager
+    - utilities-terminal
+* launcher icons: launcher_icon_theme
+* clock format: time1_format
+    - %a: abbreviated day of the week
+    - %d: two-digit day of the month
+    - %b: abbreviated month
+    - %H: 24-hour format hour
+    - %M: minutes
+
+OPENBOX
+* theme: /usr/share/themes
+* icons: /usr/share/icons
+
+CONKY
+* ~/.conkyrc
+
+VIM
+* ~/.vimrc
