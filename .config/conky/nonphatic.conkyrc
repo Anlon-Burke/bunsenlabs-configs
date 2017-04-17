@@ -7,7 +7,7 @@ imlib_cache_size 10
 
 # Window specifications #
 gap_x 0
-gap_y 25
+gap_y 35
 minimum_size 268 1220
 maximum_width 268
 alignment top_right

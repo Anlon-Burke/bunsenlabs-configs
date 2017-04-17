@@ -38,3 +38,6 @@
 
 ## vim
 !.vimrc
+
+## xmodmap
+!.Xmodmap

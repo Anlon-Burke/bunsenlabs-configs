@@ -258,6 +258,11 @@
                     </command>
 				</action>
 			</item>
+			<item label="Audio">
+				<action name="Execute">
+					<command>pavucontrol</command>
+				</action>
+			</item>
 			<menu id="dmenuconfig" label="dmenu">
 				<item label="Edit Start-up Script">
 					<action name="Execute">
