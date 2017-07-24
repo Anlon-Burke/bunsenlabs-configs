@@ -118,10 +118,7 @@ ${goto 40}${color5}Uptime:${alignr 40}${uptime}
 
 ${goto 40}${color5}UTC:${alignr 40}${utime %H:%M:%S}
 
-${if_match ${battery_percent BAT0} != 100}\
-	${goto 40}${color5}Battery:${alignr 39}${battery_time BAT0} left\
-${else}${goto 40}${color5}Battery:${alignr 39}Fully charged\
-${endif}
+${goto 40}${color5}Battery:${alignr 39}[${battery_percent}%]
 
 ${goto 40}${color5}Volume: ${alignr 39}${exec amixer -c 1 get Master | grep Mono: | cut -d " " -f6}
 
