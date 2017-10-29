@@ -5,7 +5,7 @@
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
   <focus>
-    <focusNew>no</focusNew>
+    <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
     <followMouse>no</followMouse>
@@ -40,7 +40,7 @@
                     'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Bunsen-Blackish-flat</name>
+    <name>Afterpiece</name>
     <titleLayout>NDSLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -424,21 +424,13 @@
         <command>pavucontrol</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>amixer set -D pulse Master 5%- unmute</command>
-      </action>
-    </keybind>
+    <!--
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>amixer set -D pulse Master toggle</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>amixer set -D pulse Master 5%+ unmute</command>
-      </action>
-    </keybind>
+-->
     <keybind key="W-x">
       <action name="Execute">
         <startupnotify>

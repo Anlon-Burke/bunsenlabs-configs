@@ -1,6 +1,0 @@
-## Network configuration
-
-ip link set wlp2s0 up
-wpa_supplicant -D n180211,wext -i wlp2s0 -c /etc/wpa_supplicant.conf
-iw dev wlp2s0 link
-dhcpcd wlp2s0
