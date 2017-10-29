@@ -9,6 +9,7 @@
 .config/*
 
 # conky
+!.conkyrc
 !.config/conky/
 .config/conky/*
 !.config/conky/images/
