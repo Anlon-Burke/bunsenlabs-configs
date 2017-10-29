@@ -4,11 +4,11 @@
 !README.md
 !bunsen-setup-notes.txt
 
-## configs
+# configs
 !.config/
 .config/*
 
-# conky
+## conky
 !.conkyrc
 !.config/conky/
 .config/conky/*
@@ -19,13 +19,17 @@
 !.config/conky/images/weather-icons/
 !.config/conky/images/weather-icons/*
 
-# openbox
+## openbox
 !.config/openbox/
 !.config/openbox/*
 
-# tint2
+## tint2
 !.config/tint2/
 !.config/tint2/*
 
-## vim
+## terminator
+!.config/terminator/
+!.config/terminator/*
+
+# vim
 !.vimrc
