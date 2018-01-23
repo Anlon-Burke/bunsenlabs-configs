@@ -105,8 +105,8 @@ ${hr 2}
 # Other
 ${goto 40}${color5}Uptime:${alignr 40}${uptime}
 ${goto 40}${color5}UTC:${alignr 40}${utime %H:%M:%S}
-${goto 40}${color5}Beats:${alignr 40}@${exec echo $((($(date +%S) + $(date +%M) * 60 + (($(date +%H)-$(date +%-:::z)+1) % 24) * 3600) * 5 / 432))}
-${if_match ${battery_percent BAT1} != 100}
+${goto 40}${color5}Beats:${alignr 40}@${exec echo $((($(date +%-S) + $(date +%-M) * 60 + (($(date +%-H)-$(date +%-:::z)+1) % 24) * 3600) * 5 / 432))}
+${if_match ${battery_percent BAT0} != 100}
 	${goto 40}${color5}Battery:${alignr 39}${battery_time BAT0} left\
 ${else}${goto 40}${color5}Battery:${alignr 39}Fully charged\
 ${endif}
