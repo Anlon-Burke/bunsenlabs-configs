@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TARBALL=~/Downloads/firefox.tar.bz2
-URL="https://download.mozilla.org/?product=firefox-beta-latest-ssl&os=linux64&lang=en-US"
+URL="https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US"
 
 wget -O $TARBALL $URL
 rm -rf /opt/firefox
