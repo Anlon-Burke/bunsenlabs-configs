@@ -106,10 +106,7 @@ ${hr 2}
 ${goto 40}${color5}Uptime:${alignr 40}${uptime}
 ${goto 40}${color5}UTC:${alignr 40}${utime %H:%M:%S}
 ${goto 40}${color5}Beats:${alignr 40}@${exec echo $((($(date +%-S) + $(date +%-M) * 60 + (($(date +%-H)-$(date +%-:::z)+1) % 24) * 3600) * 5 / 432))}
-${if_match ${battery_percent BAT0} != 100}
-	${goto 40}${color5}Battery:${alignr 39}${battery_time BAT0} left\
-${else}${goto 40}${color5}Battery:${alignr 39}Fully charged\
-${endif}
+${goto 40}${color5}Battery:${alignr 39}${battery_percent BAT0}%
 ${goto 40}${color5}Volume: ${alignr 39}${exec amixer -c 0 get Master | grep "Front Left:" | cut -d " " -f7} : ${exec amixer -c 0 get Master | grep "Front Right:" | cut -d " " -f7}
 ${alignc}${pre_exec lsb_release -i | cut -f 2} \
 ${pre_exec lsb_release -r | cut -f 2} \
