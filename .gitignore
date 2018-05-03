@@ -31,6 +31,10 @@
 !.config/terminator/
 !.config/terminator/*
 
+## bl-exit
+!.config/bl-exit/
+!.config/bl-exit/**
+
 # vim
 !.vimrc
 
