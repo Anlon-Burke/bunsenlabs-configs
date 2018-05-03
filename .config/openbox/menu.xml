@@ -108,13 +108,6 @@
                     </command>
                 </action>
             </item>
-            <item label="BLOB Themes Manager">
-                <action name="Execute">
-                    <command>
-                        bl-obthemes
-                    </command>
-                </action>
-            </item>
         </menu>
         <menu execute="bl-graphics-pipemenu" id="bl-graphics-pipemenu" label="Graphics"/>
         <menu execute="bl-multimedia-pipemenu" id="bl-multimedia-pipemenu" label="Multimedia"/>
@@ -150,16 +143,13 @@
             </item>
             <menu execute="bl-remote-desktop-pipemenu" id="remotedesktop" label="Remote Desktop"/>
             <menu execute="bl-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
+<!--
             <separator label="Services"/>
             <menu execute="bl-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
+-->
         </menu>
         <menu id="office" label="Office">
             <menu id="libreoffice" label="LibreOffice" execute="bl-libreoffice-pipemenu" />
-            <item label="AbiWord">
-				<action name="Execute">
-					<command>abiword</command>
-				</action>
-			</item>
             <item label="Gnumeric Spreadsheet">
                 <action name="Execute">
                     <command>
@@ -210,14 +200,14 @@
                     </action>
                 </item>
                 <separator/>
-                <item label="GUI Menu Editor">
+                <item label="Menu Editor">
                     <action name="Execute">
                         <command>
                             obmenu
                         </command>
                     </action>
                 </item>
-                <item label="GUI Config Tool">
+                <item label="WM Preferences">
                     <action name="Execute">
                         <command>
                             obconf
@@ -249,7 +239,21 @@
                     </command>
                 </action>
             </item>
-            <item label="Choose Wallpaper">
+            <item label="Font configuration">
+                <action name="Execute">
+                    <command>
+                        bl-text-editor ~/.config/fontconfig/fonts.conf
+                    </command>
+                </action>
+            </item>
+            <item label="BLOB Themes Manager">
+                <action name="Execute">
+                    <command>
+                        bl-obthemes
+                    </command>
+                </action>
+            </item>
+            <item label="Wallpaper">
                 <action name="Execute">
                     <command>
                         nitrogen
@@ -276,7 +280,7 @@
                         </command>
                     </action>
                 </item>
-                <separator label="Help?"/>
+                <separator label="Help"/>
                 <item label="man page">
                     <action name="Execute">
                         <command>
@@ -293,7 +297,7 @@
                         </command>
                     </action>
                 </item>
-                <separator label="Help?"/>
+                <separator label="Help"/>
                 <item label="man page">
                     <action name="Execute">
                         <command>
@@ -310,7 +314,7 @@
                         </command>
                     </action>
                 </item>
-                <separator label="Help?"/>
+                <separator label="Help"/>
                 <item label="man xrandr">
                     <action name="Execute">
                         <command>
@@ -325,42 +329,28 @@
             <item label="Synaptic Package Manager">
                 <action name="Execute">
                     <command>
-                        gksudo synaptic
-                    </command>
-                </action>
-            </item>
-            <item label="File Manager as root">
-                <action name="Execute">
-                    <command>
-                        gksudo bl-file-manager
-                    </command>
-                </action>
-            </item>
-            <item label="Text Editor as root">
-                <action name="Execute">
-                    <command>
-                        gksudo bl-text-editor
+                        pkexec synaptic
                     </command>
                 </action>
             </item>
             <item label="Login Settings">
                 <action name="Execute">
                     <command>
-                        gksudo bl-text-editor /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm.conf
+                        pkexec bl-text-editor /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm.conf
                     </command>
                 </action>
             </item>
             <item label="GParted">
                 <action name="Execute">
                     <command>
-                        gksudo gparted
+                        pkexec gparted
                     </command>
                 </action>
             </item>
             <item label="Edit Debian Alternatives">
                 <action name="Execute">
                     <command>
-                        gksudo galternatives
+                        galternatives
                     </command>
                 </action>
             </item>
